@@ -6,7 +6,13 @@ import (
 )
 
 func main() {
-	filepath := os.Args[1]
+	args := os.Args
+	if len(args) == 0 {
+		fmt.Println("no argument provided")
+		os.Exit(1)
+	}
+
+	filepath := args[1]
 	if filepath == "" {
 		fmt.Println("no path provided")
 		os.Exit(1)
