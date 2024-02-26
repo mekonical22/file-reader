@@ -18,4 +18,9 @@ func main() {
 		os.Exit(1)
 	}
 	defer file.Close()
+
+	f_stats, _ := file.Stat()
+	b := make([]byte, f_stats.Size())
+	file.Read(b)
+	fmt.Println(string(b))
 }
