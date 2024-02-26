@@ -7,8 +7,8 @@ import (
 
 func main() {
 	args := os.Args
-	if len(args) == 0 {
-		fmt.Println("no argument provided")
+	if len(args) == 1 {
+		fmt.Println("no arguments provided")
 		os.Exit(1)
 	}
 
